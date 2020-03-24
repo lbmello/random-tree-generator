@@ -1,0 +1,5 @@
+- basic:
+    path: '/tmp/testetree'
+    levels: 8
+    size: 2
+    debug: True
