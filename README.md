@@ -16,12 +16,24 @@ $ tree
 Os nomes dos diretórios e arquivos são gerados sempre utilizando um hash MD5 para evitar conflitos de nomes.
 
 ## Pré Requisitos
+
+### Listagem dos Pré Requisitos
 * Sistema operacional [Unix](https://pt.wikipedia.org/wiki/Unix)
 * [python](https://www.python.org/download/releases/3.0/) - acima da versão 3.6
     * [Módulo PyYaml](https://pypi.org/project/PyYAML/) - acima da versão 5.3
 
+### Instalação das Dependências
+Para instalação do PyYaml utilizaremos o gerenciador de pacotes [PIP3](https://pip.pypa.io/en/stable/):
+```sh 
+pip3 install PyYaml
+```
+Ou simplesmente importaremos o [arquivo](https://github.com/lbmello/random-tree-generator/blob/master/requirements.txt) que configura o ambiente:
+```sh 
+pip3 install -r requirements.txt
+```
+
 ## Config.YAML
-Arquivo de configuração onde parâmetros para criação da árvore de diretórios/arquivos são definidos.
+Arquivo de configuração onde os parâmetros para criação da árvore de diretórios/arquivos são definidos.
 
 Sua localização padrão é na raiz do projeto, sempre com nome 'config.yaml'.
 
@@ -35,3 +47,9 @@ Sua localização padrão é na raiz do projeto, sempre com nome 'config.yaml'.
     Ex. Se o size for definido no arquivo de conf como 3, durante a execução do programa, poderão ser geradas de 1 até 9 arquivos por pasta, pois para arquivos defini-se size*3.
 
 - debug: (booleano) - Se marcado como True, exibe em shell alguns status durante a execução.
+
+## Execução do Módulo
+Após clonar o repositório, configurar as dependências do ambiente e setar os parâmetros personlizados no arquivo de configuração, é necessário apenas executar o módulo:
+```sh
+$ python3 -m random_tree
+```
