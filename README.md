@@ -1,6 +1,6 @@
 ## Introdução
 Módulo Python utilizado para criação de uma estrutura aleatória de diretórios e arquivos, em formato árvore.
-
+```sh
 $ tree
 .
 ├── 22b3e01b3d101a013916a3b6ae7597ef
@@ -11,6 +11,7 @@ $ tree
 │   │   ├── 23d03c00fdf558cf95f007236cec15b6
 │   │   ├── 2c4d0fe848b76ec0e979b8595aa1a1e6
 │   │   ├── 4d5af581d1b75b35483d9d3a4186ec4b
+```
 
 Os nomes dos diretórios e arquivos são gerados sempre utilizando um hash MD5 para evitar conflitos de nomes.
 
@@ -25,16 +26,12 @@ Arquivo de configuração onde parâmetros para criação da árvore de diretór
 Sua localização padrão é na raiz do projeto, sempre com nome 'config.yaml'.
 
 ### Campos do arquivo Config.YAML
-- path: (string)
-    Local aonde o conteúdo da árvore será gerado.
+- path: (string) - Local aonde o conteúdo da árvore será gerado.
 
-- levels: (inteiro)
-    Quantidade de subpastas, contando da raiz.
+- levels: (inteiro) - Quantidade de subpastas, contando da raiz.
 
-- size: (inteiro)
-    Multiplicador de tamanho da árvore. O número definido neste campo será multiplicado por uma constante e o resultado será usado para definir o alcance da função randômica que cria as pastas e os arquivos. Quando maior for o {size}, mais pastas e arquivos serão gerados. Independente da quantidade de níveis. 
+- size: (inteiro) - Multiplicador de tamanho da árvore. O número definido neste campo será multiplicado por uma constante e o resultado será usado para definir o alcance da função randômica que cria as pastas e os arquivos. Quando maior for o {size}, mais pastas e arquivos serão gerados. Independente da quantidade de níveis. 
     Para o alcance dos arquivos defini-se (size * {3}), para as pastas (size * {2}).
     Ex. Se o size for definido no arquivo de conf como 3, durante a execução do programa, poderão ser geradas de 1 até 9 arquivos por pasta, pois para arquivos defini-se size*3.
 
-- debug: (booleano)
-    Se marcado como True, exibe em shell alguns status durante a execução.
+- debug: (booleano) - Se marcado como True, exibe em shell alguns status durante a execução.
