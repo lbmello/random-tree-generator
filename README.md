@@ -37,6 +37,14 @@ Arquivo de configuração onde os parâmetros para criação da árvore de diret
 
 Sua localização padrão é na raiz do projeto, sempre com nome 'config.yaml'.
 
+```yaml
+- basic:
+    path: '/tmp/testetree'
+    levels: 8
+    size: 2
+    debug: True
+```
+
 ### Campos do arquivo Config.YAML
 - path: (string) - Local aonde o conteúdo da árvore será gerado.
 
